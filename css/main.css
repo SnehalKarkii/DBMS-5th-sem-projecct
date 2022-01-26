@@ -1,0 +1,438 @@
+* {
+    margin         : 0;
+    padding        : 0;
+    box-sizing     : border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+
+:root {
+    --primary-color    : #00A145;
+    --secondary-color  : #dfe4ea;
+    --btn-primary-color: #44bd32;
+    --btn-danger-color : #eb2f06;
+    --btn-add-color    : #4a69bd;
+}
+
+
+
+/************* fonts**********/
+/* Font */
+
+@font-face {
+    font-family: 'raleway-thin';
+    src        : url(../fonts/Raleway-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'raleway-regular';
+    src        : url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'raleway-medium';
+    src        : url('../fonts/Raleway-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    src        : url('../fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'raleway-extrabold';
+    src        : url('../fonts/Raleway-ExtraBold.ttf');
+}
+
+
+body {
+    font-family     : 'raleway-regular';
+    background-color: #f7f7f7;
+    font-size       : 16px;
+}
+
+/****************** Reusable Tag ********************/
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.title-letter-space {
+    letter-spacing: 2px;
+    word-spacing  : 3px;
+}
+
+.normal-word-space {
+    letter-spacing: 1px;
+    word-spacing  : 2px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.wrapper {
+    width : 90%;
+    margin: 0 auto;
+}
+
+
+/*********Navigation part***********/
+
+nav {
+    position        : fixed;
+    top             : 0;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    flex-direction  : row;
+    flex-wrap       : wrap;
+    background-color: white;
+    width           : 100%;
+    height          : 70px;
+    z-index         : 1;
+    box-shadow      : 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+ul {
+    display        : flex;
+    justify-content: right;
+    list-style     : none;
+    margin-right   : 15%;
+}
+
+
+.logo {
+    flex          : 1 1 auto;
+    margin-left   : 10%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight   : bold;
+    font-size     : 35px;
+}
+
+ul li {
+    padding: 5px;
+}
+
+ul li a {
+    margin         : 15px;
+    color          : #000;
+    text-decoration: none;
+    text-transform : uppercase;
+}
+
+ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* **********search button******** */
+.search {
+    margin  : auto;
+    width   : 50%;
+    position: relative;
+    top     : 45%;
+}
+
+.search input,
+button {
+    width           : 75%;
+    border          : 1px solid white;
+    border-right    : 0px;
+    font-size       : 18px;
+    padding         : 12px;
+    background-color: #f7f7f7;
+    color           : black;
+    outline         : none;
+
+}
+
+.search button {
+    width           : 25%;
+    background-color: var(--primary-color);
+    color           : var(--secondary-color);
+    transition      : all 0.3s;
+    float           : right;
+    border-left     : 0px;
+    cursor          : pointer;
+    border          : 1px solid var(--primary-color);
+}
+
+.search button:hover {
+    background-color: var(--btn-primary-color);
+}
+
+.search-container {
+    background-image   : linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(../images/bg3.jpg);
+    width              : 100%;
+    height             : 97.5vh;
+    background-position: center;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    margin-top         : 18px;
+}
+
+.search h2 {
+    color        : white;
+    margin-bottom: 10px;
+    font-weight  : 300;
+    font-size    : 28px;
+}
+
+
+/**********************Categoies section  ************/
+
+
+.categories {
+    background-color: #ebebeb;
+}
+
+.categories a {
+    text-decoration: none;
+    color          : black;
+}
+
+.categories h2 {
+    padding: 50px 0;
+}
+
+.categories .box-container {
+    display        : flex;
+    flex-grow      : 1;
+    flex-basis     : 100px;
+    justify-content: space-evenly;
+    padding-bottom : 100px;
+    flex-wrap      : wrap;
+}
+
+.box {
+    width     : 300px;
+    height    : 200px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin    : 40px 0;
+}
+
+.box img {
+    height: 100%;
+    width : 100%;
+}
+
+.box p {
+    background-color: #ffffff;
+    padding         : 5px 0;
+    font-size       : 20px;
+}
+
+.box:hover img {
+    transform : scale(1.3);
+    transition: 0.5s;
+}
+
+.box .img {
+    overflow: hidden;
+}
+
+
+/* Food section */
+
+.food-card {
+    padding: 50px 0;
+}
+
+.food-card h2 {
+    margin-bottom: 50px;
+}
+
+
+
+.food-card .item-container {
+    display        : flex;
+    flex-grow      : 1;
+    flex-basis     : 100px;
+    justify-content: space-evenly;
+    padding-bottom : 100px;
+    flex-wrap      : wrap;
+}
+
+.food-card .item {
+    width           : 45%;
+    height          : 180px;
+    margin          : 1%;
+    padding         : 2%;
+    background-color: white;
+    border-radius   : 15px;
+    box-shadow      : 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+
+.food-menu-desc {
+    width       : 70%;
+    float       : left;
+    padding-left: 50px;
+}
+
+.food-price {
+    font-size: 1.2rem;
+    margin   : 2% 0;
+}
+
+.food-detail {
+    font-size: 1rem;
+    color    : #747d8c;
+}
+
+.food-card a {
+    text-decoration : none;
+    color           : white;
+    padding         : 5px 10px;
+    background-color: var(--primary-color);
+    border-radius   : 2px;
+}
+
+
+#section {
+    padding-top: 100px;
+}
+
+/* Deleivery Address */
+
+.details-container {
+    background-image     : linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url(../images/bg3.jpg);
+    height               : 100%;
+    display              : flex;
+    justify-content      : center;
+    align-items          : center;
+    padding              : 100px 0;
+    background-position  : center;
+    background-size      : cover;
+    background-attachment: fixed;
+
+
+}
+
+.details-container h2 {
+
+    margin-bottom: 40px;
+}
+
+.details-form {
+    background-color: #f7f7f7;
+}
+
+
+.details-container .item {
+    /* position        : absolute;
+    top             : 50%;
+    left            : 50%;
+    transform       : translate(-50%, -50%); */
+
+    width           : 40%;
+    padding         : 1%;
+    background-color: white;
+    border-radius   : 15px;
+    box-shadow      : 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.food-card img,
+.details-container .item img {
+    width: 20%;
+    float: left;
+}
+
+.details-container .item img {
+    width : 20%;
+    height: 117px;
+}
+
+.details-container .food-menu-desc {
+    background-color: #b8e994;
+    padding         : 9.5px 20px;
+    margin-bottom   : 10px;
+}
+
+.deleivery-details h4 {
+    margin-top: 200px;
+    padding   : 10px;
+}
+
+.deleivery-details {
+    background-color: #b8e994;
+    padding         : 0px 20px;
+    padding-bottom  : 40px;
+}
+
+.data-input {
+    display       : flex;
+    flex-direction: column;
+    margin-bottom : 20px;
+}
+
+.data-input input {
+    margin       : 8px 0;
+    border       : 1px solid #333;
+    padding      : 5px 10px;
+    outline      : none;
+    font-size    : 16px;
+    border-radius: 10px;
+}
+
+textarea {
+    resize    : none;
+    margin-top: 10px;
+    padding   : 10px;
+    outline   : none;
+}
+
+.submit button {
+    background-color: var(--primary-color);
+    cursor          : pointer;
+}
+
+/* DropDown */
+ul li:last-child {
+    background-color: var(--primary-color);
+    padding-left    : 23px;
+    padding-right   : 23px;
+}
+
+ul li:last-child:hover a {
+    color: white;
+}
+
+ul li ul.dropdown li {
+    display         : inline-block;
+    background-color: var(--btn-danger-color);
+    padding-right   : 10px;
+}
+
+ul li ul.dropdown {
+    width   : 100%;
+    position: absolute;
+    z-index : 2220;
+
+}
+
+ul li:hover ul.dropdown {
+    margin-top : 5px;
+    margin-left: -23px;
+    display    : block;
+}
+
+.btn-home {
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #777;
+    padding         : 20px;
+    color           : white;
+    position        : fixed;
+    bottom          : 0;
+    left            : 0;
+    width           : 100%;
+}
