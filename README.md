@@ -4,7 +4,8 @@ This is the food ordering website from where you can place your order.
 With the help of this website, customers can save themselves a lot of burden from waiting 
 in line place an order and picking up the order later.They can browse the entire food items available
 in website and order food of their choise.The website support both pickup and deleivery orders
-
+<br>
+Report :[embed]https://github.com/Ksnehal073/DBMS-5th-sem-projecct-/blob/main/Report/food%20order%20report.pdf[/embed] 
 Admin Login & Password (You can change this in phpmyadmin):<br>
 Login: ksnehal<br>
 Password: 12345
